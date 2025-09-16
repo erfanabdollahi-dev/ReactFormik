@@ -2,10 +2,13 @@
 
 @layer base {
   input {
-    @apply bg-white/90 text-black font-bold  w-full  h-14 outline-0  p-5 text-center rounded-lg focus:border-2 focus:border-emerald-400 focus:border-1;
+    @apply  bg-white/90 text-black font-bold  w-full  h-11 outline-0  p-5 text-center rounded-lg focus:border-2 focus:border-emerald-400 focus:border-1;
+  }
+  textarea{
+    @apply bg-white/90 text-black font-bold  w-full  max-h-14 outline-0  p-5 text-center rounded-lg focus:border-2 focus:border-emerald-400 focus:border-1
   }
   label{
-    @apply font-bold text-lg pr-2
+    @apply mt-3 font-bold text-[14px] pr-2
   }
   *{
     @apply text-white
@@ -18,10 +21,10 @@
   }
 
   .register-con {
-    @apply bg-white/5 backdrop-blur-xl  w-[minmax(80%)] sm:w-[50%] lg:w-[40%] lg:h-150 2xl:w-[35%] h-130 p-10 rounded-3xl flex flex-col items-center;
+    @apply bg-white/5 backdrop-blur-xl  w-[minmax(80%)] sm:w-[50%] lg:w-[40%] lg:min-h-150 2xl:w-[35%] min-h-130 p-10 rounded-3xl flex flex-col items-center;
   }
   .register-form {
-    @apply w-full h-full  flex flex-col justify-around;
+    @apply w-full h-full  flex flex-col justify-around ;
   }
   .title {
     @apply relative inline-block text-2xl text-white font-bold mb-6.5 ;
