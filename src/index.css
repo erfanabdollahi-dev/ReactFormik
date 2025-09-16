@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@layer base {
+  input {
+    @apply bg-white/90 text-black font-bold  w-full  h-14 outline-0  p-5 text-center rounded-lg focus:border-2 focus:border-emerald-400 focus:border-1;
+  }
+  label{
+    @apply font-bold text-lg pr-2
+  }
+  *{
+    @apply text-white
+  }
+}
+
+@layer components {
+  .main-con {
+    @apply flex justify-center items-center bg-[url('./assets/room.jpg')] bg-cover bg-no-repeat bg-center min-h-screen;
+  }
+
+  .register-con {
+    @apply bg-white/5 backdrop-blur-xl  w-[minmax(80%)] sm:w-[50%] lg:w-[40%] lg:h-150 2xl:w-[35%] h-130 p-10 rounded-3xl flex flex-col items-center;
+  }
+  .register-form {
+    @apply w-full h-full  flex flex-col justify-around;
+  }
+  .title {
+    @apply relative inline-block text-2xl text-white font-bold mb-6.5 ;
+  }
+  .title::after {
+    @apply content-[''] absolute h-[3px] w-0 left-0 bottom-[-10px] bg-yellow-500 rounded-4xl duration-300;
+  }
+  .title:hover::after {
+    @apply w-full;
+  }
+  .btn {
+    @apply bg-emerald-700 mt-5 p-3 w-30 self-end rounded-lg cursor-pointer font-semibold duration-150 ease-in;
+  }
+  .btn:hover{
+    @apply transform-[scale(1.02)] bg-emerald-600
+
+  }
+}
