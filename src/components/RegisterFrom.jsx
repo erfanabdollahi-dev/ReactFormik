@@ -61,41 +61,44 @@ const RegisterFrom = () => {
             <div className="register-con">
                 <h1 className="title">ثبت نام</h1>
                 <Form action="" className="register-form">
-                    <label htmlFor="name">نام : </label>
-                    <FastField
-                        type="text"
-                        id="name"
-                        placeholder=""
-                        name="name"
-                    />
-                    <ErrorMessage name="name" component={FieldError} />
+                    <div className="item-con h-[90px]">
+                        <label htmlFor="name">نام : </label>
+                        <FastField
+                            type="text"
+                            id="name"
+                            placeholder=""
+                            name="name"
+                        />
+                        <ErrorMessage name="name" component={FieldError} />
+                    </div>
+                    <div className="item-con h-[90px]">
+                        <label htmlFor="email">ایمیل : </label>
+                        <FastField
+                            dir="ltr"
+                            type="email"
+                            id="email"
+                            placeholder=""
+                            name="email"
+                        />
+                        <ErrorMessage name="email" component={FieldError} />
+                    </div>
 
-                    <label htmlFor="email">ایمیل : </label>
-                    <FastField
-                        dir="ltr"
-                        type="email"
-                        id="email"
-                        placeholder=""
-                        name="email"
-                    />
-                    <ErrorMessage name="email" component={FieldError} />
-
-                    <label htmlFor="password">رمز عبور : </label>
-                    <FastField name="password">
-                        {(props) => <PasswordField {...props} />}
-                    </FastField>
-
+                    <div className="item-con h-[90px]">
+                        <label htmlFor="password">رمز عبور : </label>
+                        <FastField name="password">
+                            {(props) => <PasswordField {...props} />}
+                        </FastField>
+                    </div>
                     <label htmlFor="bio">بیوگرافی : </label>
                     <FastField
                         dir="ltr"
-                        type="email"
                         id="bio"
                         placeholder=""
                         name="bio"
                         component="textarea"
                     />
 
-                    <div className="address flex gap-1 mt-3">
+                    <div className="address flex gap-1 mt-3 h-[90px]">
                         <div className="w-full">
                             <label htmlFor="city">شهر : </label>
                             <FastField
@@ -111,7 +114,7 @@ const RegisterFrom = () => {
                             />
                         </div>
 
-                        <div className="w-full">
+                        <div className="w-full h-[90px]">
                             <label htmlFor="postalCode">کد پستی : </label>
                             <FastField
                                 dir="ltr"
@@ -126,11 +129,9 @@ const RegisterFrom = () => {
                             />
                         </div>
                     </div>
-                    <div className="address flex gap-1 mt-3">
+                    <div className="address flex gap-1 mt-3 h-[90px]">
                         <div className="w-full">
-                            <label htmlFor="telePhone">
-                                شماره تلفن ثابت :
-                            </label>
+                            <label htmlFor="telePhone">شماره تلفن ثابت :</label>
                             <FastField
                                 dir="ltr"
                                 type="text"
@@ -162,8 +163,8 @@ const RegisterFrom = () => {
                         </div>
                     </div>
 
-                    <FieldArray name='favorits'>
-                        {props=><FavCompo {...props} />}
+                    <FieldArray name="favorits">
+                        {(props) => <FavCompo {...props} />}
                     </FieldArray>
 
                     <button className="btn" type="submit">
