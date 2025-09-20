@@ -5,8 +5,7 @@ import FieldError from './FieldError';
 const FavCompo = (props) => {
     const { form, push, remove } = props;
     const { favorits } = form.values;
-    console.log(favorits);
-    console.log(form);
+
 
     return (
         <>
